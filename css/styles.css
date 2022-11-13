@@ -49,8 +49,7 @@ p {
   text-decoration: none;
   color: currentColor;
   display: inline-block;
-  transition-property: transform;
-  transition: var(--anim);
+  transition: color var(--anim);
 }
 
 .list {
@@ -68,7 +67,6 @@ img {
 .link:hover,
 .link:focus {
   color: var(--aсcent-text-color);
-  transition: var(--anim);
 }
 
 .link.current {
@@ -123,13 +121,12 @@ img {
   letter-spacing: 0.03em;
   color: var(--aсcent-text-color);
   padding: 25px 0;
-  transition: transform var(--anim);
+  transition: transform 1000ms;
 }
 
 .logo:hover,
 .logo-footer:hover {
-  transform: scale(1.1);
-  transition: var(--anim);
+  transform: scale(1.2);
 }
 
 .studio-header {
@@ -176,14 +173,13 @@ img {
   bottom: -2%;
   transform: translateX(-50%) scaleX(0.3);
   opacity: 0;
-  transition: transform var(--anim), opacity var(--anim);
+  transition: opacity var(--anim), scaleX var(--anim), transform var(--anim);
 }
 
 .site-nav .link:hover::after,
 .site-nav .link:focus::after {
   opacity: 1;
   transform: translateX(-50%) scaleX(1);
-  transition: var(--anim);
 }
 
 .site-nav .link,
@@ -265,14 +261,13 @@ img {
   border-radius: 4px;
   padding: 10px 30px;
   min-width: 216px;
-  transition-property: transform;
-  transition: var(--anim);
+  /* transition-property: transform; */
+  transition: background-color var(--anim);
 }
 
 .hero-btn:hover,
 .hero-btn:focus {
   background-color: #188ce8;
-  transition: var(--anim);
 }
 
 /*
@@ -415,14 +410,12 @@ img {
 }
 
 .overlay {
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 27px 10px;
   background-color: rgba(47, 48, 58, 0.8);
 }
 
@@ -433,6 +426,7 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--secondary-text-color);
+  padding: 27px 10px;
 }
 
 /*
@@ -502,8 +496,7 @@ img {
   height: 44px;
   color: #afb1b8;
   border-radius: 50%;
-  transition-property: transform;
-  transition: var(--anim);
+  transition: color var(--anim), background-color var(--anim);
 }
 .socials-link:hover,
 .socials-link:focus,
@@ -511,7 +504,6 @@ img {
 .socials-link-footer:focus {
   color: var(--secondary-text-color);
   background-color: var(--aсcent-text-color);
-  transition: var(--anim);
 }
 
 .socials-icon {
@@ -537,14 +529,13 @@ img {
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  transition: var(--anim);
+  transition: color var(--anim), border-color var(--anim);
 }
 
 .client-link:hover,
 .client-link:focus {
   color: #2196f3;
   border-color: #2196f3;
-  transition: var(--anim);
 }
 .client-icon {
   fill: currentColor;
@@ -654,8 +645,8 @@ img {
   color: var(--primary-text-color);
   padding: 6px 22px;
   border: 0;
-  transition-property: transform;
-  transition: var(--anim);
+  transition: color var(--anim), background-color var(--anim),
+    box-shadow var(--anim);
 }
 .projects-list-btn:hover,
 .projects-list-btn:focus {
@@ -663,9 +654,7 @@ img {
   background-color: #2196f3;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
   cursor: pointer;
-  transition: var(--anim);
 }
 /*
   |============================
@@ -706,15 +695,13 @@ img {
 .card-set-link {
   position: relative;
   overflow: hidden;
-  transition-property: transform;
-  transition: var(--anim);
+  transition: box-shadow var(--anim);
 }
 
 .card-set-link:hover,
 .card-set-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition: var(--anim);
 }
 
 .card-set-box {
@@ -740,7 +727,6 @@ img {
 .project-item:hover .overlay-projects,
 .project-item:focus .overlay-projects {
   transform: translateY(0);
-  transition: var(--anim);
 }
 
 .overlay-projects-text {
